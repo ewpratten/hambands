@@ -21,5 +21,5 @@ cargo install --path .
 
 ## Contributing
 
-If you are interested in adding support for more amateur radio bands (or broadcast bands), check out [`src/band/mod.rs`](https://github.com/Ewpratten/hambands/blob/master/src/band/mod.rs). This file should be fairly self-explanitory. All entries are automatically validated at unit test time by `cargo`.
+If you are interested in adding support for more amateur (or broadcast) radio bands, check out [`src/band/mod.rs`](https://github.com/Ewpratten/hambands/blob/master/src/band/mod.rs). This file should be fairly self-explanatory. All entries are automatically validated at unit test time by `cargo`.
 
