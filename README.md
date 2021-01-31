@@ -1,5 +1,5 @@
 # HamBands
-[![Crates.io](https://img.shields.io/crates/v/hambands)](https://crates.io/crates/hambands) [![Documentation](https://docs.rs/mio/badge.svg)](https://docs.rs/hambands) ![Build](https://github.com/Ewpratten/hambands/workflows/Build/badge.svg)
+[![Crates.io](https://img.shields.io/crates/v/hambands)](https://crates.io/crates/hambands) [![Documentation](https://docs.rs/hambands/badge.svg)](https://docs.rs/hambands) ![Build](https://github.com/Ewpratten/hambands/workflows/Build/badge.svg)
 
 HamBands is a small Rust library for checking which amateur radio band a frequency belongs to.
 
