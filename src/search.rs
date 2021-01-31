@@ -3,6 +3,13 @@ use crate::band::ALL_BANDS;
 use crate::errors::SearchError;
 
 /// Get the corresponding band for a frequency
+/// 
+/// Example:
+/// ```rust
+/// # fn get_band_for_frequency(frequency: u64) {}
+/// get_band_for_frequency(7_040_000);
+/// get_band_for_frequency(146_350_000);
+/// ```
 pub fn get_band_for_frequency(frequency: Hertz) -> Result<&'static Band, SearchError> {
     // Search every band
     for band in ALL_BANDS.iter() {
@@ -17,9 +24,9 @@ pub fn get_band_for_frequency(frequency: Hertz) -> Result<&'static Band, SearchE
     )))
 }
 
-/// Get a band by its name.
+/// Get a band by its name
+/// 
 /// Example:
-///
 /// ```rust
 /// # fn get_band_by_name(name: &str) {}
 /// get_band_by_name("40m");
@@ -45,7 +52,7 @@ mod tests {
 
     #[test]
     fn test_band_by_valid_freq() {
-        let band = get_band_for_frequency(7041000);
+        let band = get_band_for_frequency(7_041_000);
 
         assert!(band.is_ok() && !band.is_err());
         assert_eq!(band.unwrap().name, "40m");
@@ -53,7 +60,7 @@ mod tests {
 
     #[test]
     fn test_band_by_invalid_freq() {
-        let band = get_band_for_frequency(8000000);
+        let band = get_band_for_frequency(8_000_000);
 
         assert!(band.is_err() && !band.is_ok());
     }
