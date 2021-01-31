@@ -42,10 +42,6 @@ pub fn get_band_by_name(name: &str) -> Result<&'static Band, SearchError> {
 #[cfg(test)]
 mod tests {
     use super::*;
-    // #[test]
-    // fn it_works() {
-    //     assert_eq!(2 + 2, 4);
-    // }
 
     #[test]
     fn test_band_by_valid_freq() {
@@ -55,10 +51,10 @@ mod tests {
         assert_eq!(band.unwrap().name, "40m");
     }
 
-    // #[test]
-    // fn test_band_by_invalid_freq() {
-    //     let band = get_band_for_frequency(8000000);
+    #[test]
+    fn test_band_by_invalid_freq() {
+        let band = get_band_for_frequency(8000000);
 
-    //     assert!(band.is_err() && !band.is_ok());
-    // }
+        assert!(band.is_err() && !band.is_ok());
+    }
 }
