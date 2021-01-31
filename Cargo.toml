@@ -3,6 +3,10 @@ name = "hambands"
 version = "0.1.0"
 authors = ["Evan Pratten <ewpratten@gmail.com>"]
 edition = "2018"
+license-file = "LICENSE"
+readme = "README.md"
+repository = "https://github.com/ewpratten/hambands"
+description = "HamBands is a small Rust library for checking which amateur radio band a frequency belongs to"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
