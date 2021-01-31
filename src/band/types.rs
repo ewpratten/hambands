@@ -5,6 +5,7 @@ pub type MegaHertz = f32;
 pub type GigaHertz = f32;
 
 /// Data structure for storing information about a radio band
+#[derive(Debug)]
 pub struct Band {
     /// Friendly name of the band
     pub name: &'static str,

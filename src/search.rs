@@ -19,8 +19,9 @@ pub fn get_band_for_frequency(frequency: Hertz) -> Result<&'static Band, SearchE
 
 /// Get a band by its name.
 /// Example:
-/// 
+///
 /// ```rust
+/// # fn get_band_by_name(name: &str) {}
 /// get_band_by_name("40m");
 /// get_band_by_name("70cm");
 /// ```
@@ -36,4 +37,28 @@ pub fn get_band_by_name(name: &str) -> Result<&'static Band, SearchError> {
         "Not an amateur radio band name: {}",
         name
     )))
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    // #[test]
+    // fn it_works() {
+    //     assert_eq!(2 + 2, 4);
+    // }
+
+    #[test]
+    fn test_band_by_valid_freq() {
+        let band = get_band_for_frequency(7041000);
+
+        assert!(band.is_ok() && !band.is_err());
+        assert_eq!(band.unwrap().name, "40m");
+    }
+
+    // #[test]
+    // fn test_band_by_invalid_freq() {
+    //     let band = get_band_for_frequency(8000000);
+
+    //     assert!(band.is_err() && !band.is_ok());
+    // }
 }

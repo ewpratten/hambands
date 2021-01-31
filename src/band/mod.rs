@@ -71,7 +71,7 @@ pub const ALL_BANDS: [Band; 21] = [
     Band {
         name: "4m",
         low_frequency: 70150000,
-        high_frequency: 51000000,
+        high_frequency: 70200000,
     },
     Band {
         name: "2m",
@@ -109,3 +109,21 @@ pub const ALL_BANDS: [Band; 21] = [
         high_frequency: 10500000000,
     },
 ];
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn validate_data() {
+        for band in ALL_BANDS.iter() {
+            // Ensure the low frequency is below the high frequency
+            if band.low_frequency >= band.high_frequency {
+                panic!(format!(
+                    "Low frequency {} >= high frequency {} on band: {}",
+                    band.low_frequency, band.high_frequency, band.name
+                ))
+            }
+        }
+    }
+}
