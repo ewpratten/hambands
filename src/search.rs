@@ -17,4 +17,23 @@ pub fn get_band_for_frequency(frequency: Hertz) -> Result<&'static Band, SearchE
     )))
 }
 
+/// Get a band by its name.
+/// Example:
+/// 
+/// ```rust
+/// get_band_by_name("40m");
+/// get_band_by_name("70cm");
+/// ```
+pub fn get_band_by_name(name: &str) -> Result<&'static Band, SearchError> {
+    // Search every band
+    for band in ALL_BANDS.iter() {
+        if band.name == name {
+            return Ok(band);
+        }
+    }
 
+    Err(SearchError::new(&format!(
+        "Not an amateur radio band name: {}",
+        name
+    )))
+}
