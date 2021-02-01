@@ -2,7 +2,7 @@ pub mod types;
 use self::types::Band;
 
 /// List of all valid amateur radio bands
-pub const ALL_BANDS: [Band; 22] = [
+pub const ALL_BANDS: [Band; 30] = [
     Band {
         name: "2190m",
         low_frequency: 135_700,
@@ -26,17 +26,17 @@ pub const ALL_BANDS: [Band; 22] = [
     Band {
         name: "80m",
         low_frequency: 3_500_000,
-        high_frequency: 3_800_000,
+        high_frequency: 4_000_000,
     },
     Band {
         name: "60m",
-        low_frequency: 5_351_500,
-        high_frequency: 5_366_500,
+        low_frequency: 5_060_000,
+        high_frequency: 5_450_000,
     },
     Band {
         name: "40m",
         low_frequency: 7_000_000,
-        high_frequency: 7_200_000,
+        high_frequency: 7_300_000,
     },
     Band {
         name: "30m",
@@ -70,23 +70,33 @@ pub const ALL_BANDS: [Band; 22] = [
     },
     Band {
         name: "6m",
-        low_frequency: 50_030_000,
-        high_frequency: 51_000_000,
+        low_frequency: 50_000_000,
+        high_frequency: 54_000_000,
     },
     Band {
         name: "4m",
-        low_frequency: 70_150_000,
-        high_frequency: 70_200_000,
+        low_frequency: 70_000_000,
+        high_frequency: 71_000_000,
     },
     Band {
         name: "2m",
         low_frequency: 144_000_000,
-        high_frequency: 147_990_000,
+        high_frequency: 148_000_000,
+    },
+    Band {
+        name: "1.25m",
+        low_frequency: 220_000_000,
+        high_frequency: 225_000_000,
     },
     Band {
         name: "70cm",
-        low_frequency: 430_000_000,
-        high_frequency: 440_000_000,
+        low_frequency: 420_000_000,
+        high_frequency: 450_000_000,
+    },
+    Band {
+        name: "33cm",
+        low_frequency: 902_000_000,
+        high_frequency: 928_000_000,
     },
     Band {
         name: "23cm",
@@ -112,6 +122,36 @@ pub const ALL_BANDS: [Band; 22] = [
         name: "3cm",
         low_frequency: 10_000_000_000,
         high_frequency: 10_500_000_000,
+    },
+    Band {
+        name: "1.25cm",
+        low_frequency: 24_000_000_000,
+        high_frequency: 24_250_000_000,
+    },
+    Band {
+        name: "6mm",
+        low_frequency: 47_000_000_000,
+        high_frequency: 47_200_000_000,
+    },
+    Band {
+        name: "4mm",
+        low_frequency: 75_500_000_000,
+        high_frequency: 81_000_000_000,
+    },
+    Band {
+        name: "2.5mm",
+        low_frequency: 119_980_000_000,
+        high_frequency: 120_020_000_000,
+    },
+    Band {
+        name: "2mm",
+        low_frequency: 142_000_000_000,
+        high_frequency: 149_000_000_000,
+    },
+    Band {
+        name: "1mm",
+        low_frequency: 241_000_000_000,
+        high_frequency: 250_000_000_000,
     },
 ];
 
