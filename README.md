@@ -15,7 +15,7 @@ cargo install hambands
 
 ```sh
 git clone https://github.com/ewpratten/hambands
-cd rbn
+cd hambands
 cargo install --path .
 ```
 
