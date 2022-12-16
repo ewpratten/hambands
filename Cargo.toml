@@ -1,6 +1,6 @@
 [package]
 name = "hambands"
-version = "0.1.2"
+version = "1.0.0"
 authors = ["Evan Pratten <ewpratten@gmail.com>"]
 edition = "2018"
 license-file = "LICENSE"
