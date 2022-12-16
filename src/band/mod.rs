@@ -20,7 +20,7 @@ pub const ALL_BANDS: [Band; 30] = [
     },
     Band {
         name: "160m",
-        low_frequency: 1_810_000,
+        low_frequency: 1_800_000,
         high_frequency: 2_000_000,
     },
     Band {
