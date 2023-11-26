@@ -2,7 +2,7 @@ pub mod types;
 use self::types::Band;
 
 /// List of all valid amateur radio bands
-pub const ALL_BANDS: [Band; 30] = [
+pub const ALL_BANDS: [Band; 31] = [
     Band {
         name: "2190m",
         low_frequency: 135_700,
@@ -74,6 +74,11 @@ pub const ALL_BANDS: [Band; 30] = [
         high_frequency: 54_000_000,
     },
     Band {
+        name: "5m",
+        low_frequency: 54_000_001,
+        high_frequency: 69_900_000,
+    },
+    Band {
         name: "4m",
         low_frequency: 70_000_000,
         high_frequency: 71_000_000,
@@ -85,7 +90,7 @@ pub const ALL_BANDS: [Band; 30] = [
     },
     Band {
         name: "1.25m",
-        low_frequency: 220_000_000,
+        low_frequency: 222_000_000,
         high_frequency: 225_000_000,
     },
     Band {
@@ -105,18 +110,18 @@ pub const ALL_BANDS: [Band; 30] = [
     },
     Band {
         name: "13cm",
-        low_frequency: 2_320_000_000,
+        low_frequency: 2_300_000_000,
         high_frequency: 2_450_000_000,
     },
     Band {
         name: "9cm",
-        low_frequency: 3_400_000_000,
-        high_frequency: 3_475_000_000,
+        low_frequency: 3_300_000_000,
+        high_frequency: 3_500_000_000,
     },
     Band {
         name: "6cm",
         low_frequency: 5_650_000_000,
-        high_frequency: 5_850_000_000,
+        high_frequency: 5_925_000_000,
     },
     Band {
         name: "3cm",
@@ -141,11 +146,11 @@ pub const ALL_BANDS: [Band; 30] = [
     Band {
         name: "2.5mm",
         low_frequency: 119_980_000_000,
-        high_frequency: 120_020_000_000,
+        high_frequency: 123_000_000_000,
     },
     Band {
         name: "2mm",
-        low_frequency: 142_000_000_000,
+        low_frequency: 134_000_000_000,
         high_frequency: 149_000_000_000,
     },
     Band {
