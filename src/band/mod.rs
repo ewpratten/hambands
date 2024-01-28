@@ -2,7 +2,7 @@ pub mod types;
 use self::types::Band;
 
 /// List of all valid amateur radio bands
-pub const ALL_BANDS: [Band; 31] = [
+pub const ALL_BANDS: [Band; 32] = [
     Band {
         name: "2190m",
         low_frequency: 135_700,
@@ -67,6 +67,11 @@ pub const ALL_BANDS: [Band; 31] = [
         name: "10m",
         low_frequency: 28_000_000,
         high_frequency: 29_700_000,
+    },
+    Band {
+        name: "8m",
+        low_frequency: 40_000_000,
+        high_frequency: 45_000_000,
     },
     Band {
         name: "6m",
